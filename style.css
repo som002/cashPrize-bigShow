@@ -1,0 +1,93 @@
+*,
+*::before,
+*after {
+  box-sizing: border-box;
+}
+:root{
+  --text-color: #0f0;
+}
+html,
+body,
+div,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+  /* background-color:red; */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.counter {
+  text-align: center;
+  
+  flex-direction:column;
+  background-color: #0c0c0c;
+  max-height:6rem;
+  min-width:35rem;
+  max-width:80%;
+  padding: 5rem 2rem;
+  border: 1.5rem solid rgb(255 255 255 / 14%);
+  position: relative;
+  z-index: 100;
+
+  overflow: hidden;
+}
+
+.label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 400;
+
+}
+
+.cash_value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  height:6rem;
+  overflow: hidden;
+    
+}
+
+
+.counter::after {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-image: radial-gradient(transparent 44%, #0c0c0c 80%), repeating-linear-gradient(black 3px, transparent 9px);
+
+}
+
+.cash_value {
+  display: flex;
+
+}
+
+.digits {
+  display: flex;
+  flex-direction: column;
+  transition: all 6s ease-out;
+  height:max-content;
+ 
+}
+/* .digits:not(:last-child){
+   border-top:0.1rem solid var(--text-color);
+} */
